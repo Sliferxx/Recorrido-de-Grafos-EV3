@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<conio.h>
+int matriz[8][8];
+inicializar_matriz ()
+{
+ int i=0,j=0;
+   
+   while(i<8)
+   {
+	   j=0;
+	   while (j<8)
+       {
+		  matriz[i][j]=0;	
+		  j++;
+	   }
+	   i++;	
+   }
+}
+relacion()
+{
+	matriz [0][1]=1;
+    matriz [0][4]=1;
+    matriz [1][2]=1;
+    matriz [1][5]=1;
+    matriz [2][3]=1;
+    matriz [2][6]=1;
+    matriz [4][1]=1;
+    matriz [5][2]=1;
+    matriz [5][4]=1;
+    matriz [5][6]=1;
+    matriz [6][7]=1;
+    matriz [7][3]=1;
+    printf("\n");
+
+}
+imprimir_matriz()
+{
+	int i=0,j=0;
+	while(i<8)
+	{
+		j=0;
+		while(j<8)
+		{
+			j++;
+			printf("%i",matriz[i][j]);
+		}
+		printf("\n");
+		i++;
+	}
+}
+
+int main()
+{
+	inicializar_matriz();
+	relacion();
+	imprimir_matriz();
+	return 0;
+}
