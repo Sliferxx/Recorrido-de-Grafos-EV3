@@ -1,0 +1,34 @@
+#ifndef STDIO_H
+#include <stdio.h>
+#define STDIO_H
+#endif
+
+#ifndef STDLIB_H
+#include <stdlib.h>
+#define STDLIB_H
+#endif
+
+typedef struct Tipo_Nodo{
+	char nombre,color;
+	int distancia , tiempoIni,Tiempofin,dato; 
+	struct Tipo_Nodo *padre;
+}Nodo;
+
+Iniciar_Nodo (char nombre ){
+	Nodo modificador;
+	modificador.distancia=modificador.Tiempofin=modificador.tiempoIni=0;
+	modificador.padre=NULL;
+	modificador.color='b';
+	return modificador;
+}
+
+Iniciar_Arreglo_de_nodos(Nodo arreglonodo[8]){
+	i=0;
+	while (i<8)
+	{
+		arreglonodo[i]=Iniciar_Nodo(nombre+i);
+		i++;
+		
+	}
+	
+}
