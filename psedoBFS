@@ -1,0 +1,34 @@
+Inicialmente el algoritmo colorea los vértices con blanco. Luego éstos pasan a plomo y luego negro. El color plomo es usado para definir la frontera entre lo ya descubierto o explorado y lo por visitar.
+ BFS(G,s) 
+ {  
+   /* pseudo-código */
+   int d[N], p[N], color[N]; /* Arreglos de distancia, de padres, y de color */
+   QUEUE Q; /* Cola usada como estructura auxiliar */	
+   for ( cada vértice u  V[G] -{s}) 
+   {
+     color [u] =Blanco;		d[u] = ;  /* distancia infinita si el nodo no es alcanzable */
+   }	
+      color[s] =Plomo;
+      d[s] = 0;
+      p [s]=NULL;
+      Enqueue(Q, s);
+   while ( !Queue_Vacía(Q) )
+   {
+      u = Cabeza(Q);   /* u es el primer nodo de la cola */ 
+      for ( cada v  Adj [u] )
+      {
+        if (color [v] == Blanco) 
+        {			
+          color[v]=Plomo;  /* Plomo al entrar a la cola */			
+          d [v]=d [u] +1;			
+          p [v] = u;		
+          Enqueue(Q, v);		
+        }
+        {
+          Dequeue(Q); /* se extrae u */	
+          color [u] = Negro;  /* negro luego de salir de la cola */
+        }
+      }
+    }
+  }  
+  
