@@ -6,7 +6,8 @@ Inicialmente el algoritmo colorea los vértices con blanco. Luego éstos pasan a
    QUEUE Q; /* Cola usada como estructura auxiliar */	
    for ( cada vértice u  V[G] -{s}) 
    {
-     color [u] =Blanco;		d[u] = ;  /* distancia infinita si el nodo no es alcanzable */
+     color [u] =Blanco;		
+     d[u] = ;  /* distancia infinita si el nodo no es alcanzable */
    }	
       color[s] =Plomo;
       d[s] = 0;
